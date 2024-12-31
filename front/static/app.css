@@ -1,0 +1,83 @@
+:root {
+    --bgcolor: #1a79cf; /* Background color for the header */
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Header Style */
+.page-header {
+    padding: 0.8rem 1.3rem;  /* Adjusted padding for a smaller header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* Vertically center the logo and nav */
+    background: var(--bgcolor);
+    animation: backgroundChange 5s infinite alternate;
+    height: 100px;  /* Adjust the height of the header */
+}
+
+/* Animation for Background Color */
+@keyframes backgroundChange {
+    0% {
+        background-color: #3498db;  /* Initial color */
+    }
+    50% {
+        background-color: #8e44ad;  /* Midway color */
+    }
+    100% {
+        background-color: #2ecc71;  /* Final color */
+    }
+}
+
+/* Logo Style */
+.page-header .logo img {
+    max-width: 150px;   /* Limit the maximum width of the logo */
+    max-height: 150px;  /* Limit the maximum height of the logo */
+    object-fit: contain;  /* Ensures the logo scales proportionally */
+}
+
+/* Navigation Bar Style */
+.nav-bar {
+    display: flex;  /* Align nav links in a row */
+    align-items: center;  /* Center nav items vertically */
+}
+
+.nav-bar a {
+    color: white;
+    padding: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Mobile Menu Icon Style */
+.menu-icon {
+    color: white;
+    cursor: pointer;
+    display: none;  /* Hidden by default, will show on small screens */
+}
+
+/* Button Styles */
+button {
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.9rem;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;  /* Show the menu icon on small screens */
+    }
+
+    .nav-bar {
+        display: none;  /* Hide the navigation links on small screens */
+    }
+}
+
+/* Add any additional styles here as needed */
